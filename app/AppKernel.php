@@ -9,21 +9,6 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             new Sylius\Bundle\ResourceBundle\SyliusResourceBundle(),
-            new Sylius\Bundle\CartBundle\SyliusCartBundle(),
-            new Sylius\Bundle\OrderBundle\SyliusOrderBundle(),
-            new Sylius\Bundle\MoneyBundle\SyliusMoneyBundle(),
-            new Sylius\Bundle\CurrencyBundle\SyliusCurrencyBundle(),
-            new Sylius\Bundle\AddressingBundle\SyliusAddressingBundle(),
-            new Sylius\Bundle\PromotionBundle\SyliusPromotionBundle(),
-            new Sylius\Bundle\PaymentBundle\SyliusPaymentBundle(),
-            new Sylius\Bundle\PayumBundle\SyliusPayumBundle(),
-            new Sylius\Bundle\ShippingBundle\SyliusShippingBundle(),
-            new Sylius\Bundle\TaxationBundle\SyliusTaxationBundle(),
-            new Sylius\Bundle\ProductBundle\SyliusProductBundle(),
-            new Sylius\Bundle\AttributeBundle\SyliusAttributeBundle(),
-            new Sylius\Bundle\ArchetypeBundle\SyliusArchetypeBundle(),
-            new Sylius\Bundle\VariationBundle\SyliusVariationBundle(),
-            new Sylius\Bundle\InventoryBundle\SyliusInventoryBundle(),
 
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -46,7 +31,6 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new winzou\Bundle\StateMachineBundle\winzouStateMachineBundle(),
-            new Payum\Bundle\PayumBundle\PayumBundle(),
 
             new Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle(),
 
@@ -65,7 +49,6 @@ class AppKernel extends Kernel
             new Enhavo\Bundle\DownloadBundle\EnhavoDownloadBundle(),
             new Enhavo\Bundle\NewsletterBundle\EnhavoNewsletterBundle(),
             new Enhavo\Bundle\CalendarBundle\EnhavoCalendarBundle(),
-            new Enhavo\Bundle\ShopBundle\EnhavoShopBundle(),
             new Enhavo\Bundle\ContentBundle\EnhavoContentBundle(),
             new Enhavo\Bundle\DashboardBundle\EnhavoDashboardBundle(),
             new Enhavo\Bundle\ContactBundle\EnhavoContactBundle(),
@@ -75,7 +58,7 @@ class AppKernel extends Kernel
             new Enhavo\Bundle\GeneratorBundle\EnhavoGeneratorBundle(),
             new Enhavo\Bundle\TranslationBundle\EnhavoTranslationBundle($this),
             new Enhavo\Bundle\CommentBundle\EnhavoCommentBundle(),
-            new Enhavo\Bundle\ProjectBundle\EnhavoProjectBundle(),
+            new ProjectBundle\ProjectBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

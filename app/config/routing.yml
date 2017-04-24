@@ -5,14 +5,6 @@ enhavo_theme_search:
     resource: "@EnhavoSearchBundle/Resources/config/routing/theme.yml"
     prefix:   /
 
-enhavo_shop_theme:
-    resource: "@EnhavoShopBundle/Resources/config/routing/theme.yml"
-    prefix:   /
-
-enhavo_shop_admin:
-    resource: "@EnhavoShopBundle/Resources/config/routing/admin.yml"
-    prefix:   /admin
-
 enhavo_user_theme:
     resource: "@EnhavoUserBundle/Resources/config/routing/theme.yml"
     prefix:   /
@@ -104,6 +96,7 @@ enhavo_comment:
 enhavo_translation:
     resource: "@EnhavoTranslationBundle/Resources/config/routing/translation_string.yml"
     prefix: /admin
+
 #
 # 3rd Party
 #
@@ -116,18 +109,10 @@ fos_js_routing:
 _liip_imagine:
     resource: "@LiipImagineBundle/Resources/config/routing.xml"
 
-payum_capture:
-    resource: "@PayumBundle/Resources/config/routing/capture.xml"
-
-payum_authorize:
-    resource: "@PayumBundle/Resources/config/routing/authorize.xml"
-
-payum_notify:
-    resource: "@PayumBundle/Resources/config/routing/notify.xml"
 
 #
 # project
 #
-enhavo_project:
-    resource: "@EnhavoProjectBundle/Resources/config/routing/routing.yml"
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
     prefix:   /

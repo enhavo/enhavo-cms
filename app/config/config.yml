@@ -19,19 +19,13 @@ imports:
     - { resource: '@EnhavoSearchBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoSerializerBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoSettingBundle/Resources/config/app/config.yml' }
-    - { resource: '@EnhavoShopBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoSliderBundle/Resources/config/app/config.yml' }
-    - { resource: '@EnhavoShopBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoThemeBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoTranslationBundle/Resources/config/app/config.yml' }
     - { resource: '@EnhavoUserBundle/Resources/config/app/config.yml' }
     - { resource: security.yml }
     - { resource: enhavo.yml }
-
-# Put parameters here that don't need to change on each machine where the app is deployed
-# http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
-#parameters:
-#    locale: en
+    - { resource: "@ProjectBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
