@@ -19,7 +19,7 @@
     }
   },
   "require": {
-    "enhavo/enhavo": "dev-master",
+    "enhavo/enhavo": "0.4.x-dev",
     "friendsofsymfony/user-bundle": "v2.0.0-alpha3"
   },
   "scripts": {
