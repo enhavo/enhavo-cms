@@ -20,7 +20,8 @@
   },
   "require": {
     "enhavo/enhavo": "dev-master",
-    "friendsofsymfony/user-bundle": "v2.0.0-alpha3"
+    "friendsofsymfony/user-bundle": "v2.0.0-alpha3",
+    "friendsofsymfony/jsrouting-bundle": "1.6.3"
   },
   "scripts": {
     "post-install-cmd": [
