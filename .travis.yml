@@ -1,8 +1,8 @@
 language: php
 
 php:
-  - 5.6
   - 7.0
+  - 7.1
 
 before_install:
     - composer self-update
@@ -25,4 +25,4 @@ before_script:
 
 script:
   - composer validate
-  - app/console enhavo:install --user=admin --password=admin --email=admin@enhavo.com --no-bundle --no-interaction
+  - app/console enhavo:install --user=admin@enhavo.com --password=admin --email=admin@enhavo.com --no-bundle --no-interaction
