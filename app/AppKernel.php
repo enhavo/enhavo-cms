@@ -20,7 +20,7 @@ class AppKernel extends Kernel
 
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new JMS\SerializerBundle\JMSSerializerBundle($this),
+            new JMS\SerializerBundle\JMSSerializerBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
@@ -58,6 +58,7 @@ class AppKernel extends Kernel
             new Enhavo\Bundle\GeneratorBundle\EnhavoGeneratorBundle(),
             new Enhavo\Bundle\TranslationBundle\EnhavoTranslationBundle($this),
             new Enhavo\Bundle\CommentBundle\EnhavoCommentBundle(),
+            new Enhavo\Bundle\NavigationBundle\EnhavoNavigationBundle(),
             new ProjectBundle\ProjectBundle(),
         );
 

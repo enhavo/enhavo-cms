@@ -25,6 +25,14 @@ enhavo_newsletter_subscribe:
     resource: "@EnhavoNewsletterBundle/Resources/config/routing/subscribe.yml"
     prefix: /
 
+enhavo_article_theme:
+    resource: "@EnhavoArticleBundle/Resources/config/routing/theme/article.yml"
+    prefix: /
+
+enhavo_redirect_admin:
+    resource: "@EnhavoContentBundle/Resources/config/routing/redirect.yml"
+    prefix:   /admin
+
 enhavo_search_admin:
     resource: "@EnhavoSearchBundle/Resources/config/routing/admin.yml"
     prefix:   /admin
@@ -101,6 +109,13 @@ enhavo_translation:
     resource: "@EnhavoTranslationBundle/Resources/config/routing/translation_string.yml"
     prefix: /admin
 
+enhavo_navigation:
+    resource: "@EnhavoNavigationBundle/Resources/config/routing/navigation.yml"
+    prefix: /admin
+
+enhavo_navigation_form:
+    resource: "@EnhavoNavigationBundle/Resources/config/routing/form.yml"
+    prefix: /
 #
 # 3rd Party
 #
