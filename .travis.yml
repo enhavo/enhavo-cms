@@ -1,28 +1,40 @@
 language: php
 
+dist: xenial
+
 php:
-  - 7.0
-  - 7.1
+  - 7.2
+
+services:
+  - mysql
+
+env:
+  - ENVIRONMENT=test DEBUG=true
 
 before_install:
-    - composer self-update
-    - if [[ ! -z "$GITHUB_OAUTH_TOKEN" ]]; then composer config -g github-oauth.github.com "$GITHUB_OAUTH_TOKEN" >/dev/null 2>&1; fi
-    - export USE_ZEND_ALLOC=0
+  - composer self-update
+  - if [[ ! -z "$GITHUB_OAUTH_TOKEN" ]]; then composer config -g github-oauth.github.com "$GITHUB_OAUTH_TOKEN" >/dev/null 2>&1; fi
+  - export USE_ZEND_ALLOC=0
 
 install:
-    - sudo apt-get install -y --force-yes php5-mysql
-    - mysql -e 'create database enhavo'
-    - composer install --no-interaction
+  - sudo apt-get install -y --force-yes php-mysql
+  - sudo apt-get install -y --force-yes npm
+  - sudo npm install -g yarn
+  - mysql -e 'create database enhavo_test'
+  - composer install --no-interaction --optimize-autoloader --prefer-dist
 
 before_script:
-    - app/console cache:warmup --no-debug
-    - app/console doctrine:schema:create
-    - app/console assets:install --no-debug
-    - app/console assetic:dump --no-debug
+  - bin/console cache:warmup --env=test --no-debug
+  - bin/console doctrine:migration:migrate --env=test --no-interaction
+  - bin/console assets:install --env=test --no-debug
+  - bin/console fos:js-routing:dump --format=json --target=public/js/fos_js_routes.json
+  - yarn install
+  - yarn encore dev
 
-    - php -v
-    - php -i | grep -v GITHUB_OAUTH_TOKEN
+  - php -v
+  - php -i | grep -v GITHUB_OAUTH_TOKEN
 
 script:
   - composer validate
-  - app/console enhavo:install --user=admin@enhavo.com --password=admin --email=admin@enhavo.com --no-bundle --no-interaction
+  - bin/console fos:user:create admin@enhavo.com admin@enhavo.com admin --super-admin
+  - bin/console enhavo:init
