@@ -1,0 +1,13 @@
+parameters:
+    locale: en
+
+enhavo_app:
+    template:
+        base: 'base.html.twig'
+    menu:
+        dashboard:
+            type: dashboard
+        user:
+            type: user_user
+        group:
+            type: user_group
