@@ -11,7 +11,10 @@ Installation
 ```bash
 $ composer create-project enhavo/enhavo-cms enhavo
 $ cd enhavo
-$ app/console enhavo:install
+$ yarn install
+$ yarn encore dev
+$ yarn routes:dump
+$ bin/console enhavo:init
 ```
 
 Documentation
