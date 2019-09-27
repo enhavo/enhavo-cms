@@ -20,4 +20,4 @@ $ bin/console enhavo:init
 Documentation
 -------------
 
-For further information read the [docs](http://docs.enhavo.org)
+For further information read the [docs](http://docs.enhavo.com)
