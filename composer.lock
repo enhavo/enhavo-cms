@@ -1606,6 +1606,7 @@
                 "ext-ctype": "*",
                 "ext-iconv": "*",
                 "ext-json": "*",
+                "ext-zlib": "*",
                 "facebook/graph-sdk": "^5.4",
                 "friendsofsymfony/jsrouting-bundle": "2.2.*",
                 "friendsofsymfony/user-bundle": "^2.1",
@@ -1637,25 +1638,25 @@
                 "sylius/shipping-bundle": "^1.3",
                 "sylius/taxation-bundle": "^1.3",
                 "symfony-cmf/routing-bundle": "^2.1",
-                "symfony/asset": "4.2.*",
-                "symfony/console": "4.2.*",
-                "symfony/dotenv": "4.2.*",
-                "symfony/expression-language": "4.2.*",
+                "symfony/asset": "^4.2",
+                "symfony/console": "^4.2",
+                "symfony/dotenv": "^4.2",
+                "symfony/expression-language": "^4.2",
                 "symfony/flex": "^1.1",
-                "symfony/form": "4.2.*",
-                "symfony/framework-bundle": "4.2.*",
+                "symfony/form": "^4.2",
+                "symfony/framework-bundle": "^4.2",
                 "symfony/monolog-bundle": "^3.1",
                 "symfony/orm-pack": "^1.0",
-                "symfony/process": "4.2.*",
-                "symfony/security-bundle": "4.2.*",
+                "symfony/process": "^4.2",
+                "symfony/security-bundle": "^4.2",
                 "symfony/serializer-pack": "^1.0",
                 "symfony/swiftmailer-bundle": "^3.1",
-                "symfony/translation": "4.2.*",
-                "symfony/twig-bundle": "4.2.*",
-                "symfony/validator": "4.2.*",
-                "symfony/web-link": "4.2.*",
+                "symfony/translation": "^4.2",
+                "symfony/twig-bundle": "^4.2",
+                "symfony/validator": "^4.2",
+                "symfony/web-link": "^4.2",
                 "symfony/webpack-encore-bundle": "^1.1",
-                "symfony/yaml": "4.2.*",
+                "symfony/yaml": "^4.2",
                 "tecnickcom/tcpdf": "^6.2",
                 "twig/extensions": "^1.3"
             },
@@ -1663,28 +1664,36 @@
                 "symfony/symfony": "*"
             },
             "replace": {
-                "enhavo/app-bundle": "0.7",
-                "enhavo/article-bundle": "0.7",
-                "enhavo/assets-bundle": "0.7",
-                "enhavo/calendar-bundle": "0.7",
-                "enhavo/category-bundle": "0.7",
-                "enhavo/contact-bundle": "0.7",
-                "enhavo/dashboard-bundle": "0.7",
-                "enhavo/generator-bundle": "0.7",
-                "enhavo/grid-bundle": "0.7",
-                "enhavo/installer-bundle": "0.7",
-                "enhavo/media-bundle": "0.7",
-                "enhavo/navigation-bundle": "0.7",
-                "enhavo/newsletter-bundle": "0.7",
-                "enhavo/page-bundle": "0.7",
-                "enhavo/search-bundle": "0.7",
-                "enhavo/serializer-bundle": "0.7",
-                "enhavo/setting-bundle": "0.7",
-                "enhavo/shop-bundle": "0.7",
-                "enhavo/slider-bundle": "0.7",
-                "enhavo/theme-bundle": "0.7",
-                "enhavo/translation-bundle": "0.7",
-                "enhavo/user-bundle": "0.7"
+                "enhavo/app-bundle": "self.version",
+                "enhavo/article-bundle": "self.version",
+                "enhavo/block-bundle": "self.version",
+                "enhavo/calendar-bundle": "self.version",
+                "enhavo/class-analyzer": "self.version",
+                "enhavo/comment-bundle": "self.version",
+                "enhavo/contact-bundle": "self.version",
+                "enhavo/content-bundle": "self.version",
+                "enhavo/dashboard-bundle": "self.version",
+                "enhavo/doctrine-extension": "self.version",
+                "enhavo/form-bundle": "self.version",
+                "enhavo/media-bundle": "self.version",
+                "enhavo/metadata": "self.version",
+                "enhavo/navigation-bundle": "self.version",
+                "enhavo/newsletter-bundle": "self.version",
+                "enhavo/page-bundle": "self.version",
+                "enhavo/portal-bundle": "self.version",
+                "enhavo/redirect-bundle": "self.version",
+                "enhavo/revision-bundle": "self.version",
+                "enhavo/routing-bundle": "self.version",
+                "enhavo/search-bundle": "self.version",
+                "enhavo/setting-bundle": "self.version",
+                "enhavo/shop-bundle": "self.version",
+                "enhavo/sidebar-bundle": "self.version",
+                "enhavo/slider-bundle": "self.version",
+                "enhavo/taxonomy-bundle": "self.version",
+                "enhavo/template-bundle": "self.version",
+                "enhavo/theme-bundle": "self.version",
+                "enhavo/translation-bundle": "self.version",
+                "enhavo/user-bundle": "self.version"
             },
             "require-dev": {
                 "behat/behat": "^3.0",
@@ -1698,13 +1707,13 @@
                 "symfony/maker-bundle": "^1.0",
                 "symfony/profiler-pack": "^1.0",
                 "symfony/test-pack": "^1.0",
-                "symfony/web-server-bundle": "4.2.*"
+                "symfony/web-server-bundle": "^4.2"
             },
             "type": "project",
             "extra": {
                 "symfony": {
                     "allow-contrib": false,
-                    "require": "4.2.*"
+                    "require": "^4.2"
                 }
             },
             "autoload": {
@@ -1716,8 +1725,14 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Gerhard Seidel",
+                    "email": "gseidel.message@googlemail.com"
+                }
+            ],
             "description": "enhavo",
-            "time": "2019-06-30T18:42:35+00:00"
+            "time": "2019-11-19T08:42:41+00:00"
         },
         {
             "name": "evenement/evenement",
@@ -8747,30 +8762,31 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v4.2.10",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "f7b5d04bea565a270db5d8158c1093cfa1ec10b2"
+                "reference": "8bccc59e61b41963d14c3dbdb23181e5c932a1d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/f7b5d04bea565a270db5d8158c1093cfa1ec10b2",
-                "reference": "f7b5d04bea565a270db5d8158c1093cfa1ec10b2",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8bccc59e61b41963d14c3dbdb23181e5c932a1d5",
+                "reference": "8bccc59e61b41963d14c3dbdb23181e5c932a1d5",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
+                "symfony/mime": "^4.3|^5.0",
                 "symfony/polyfill-mbstring": "~1.1"
             },
             "require-dev": {
                 "predis/predis": "~1.0",
-                "symfony/expression-language": "~3.4|~4.0"
+                "symfony/expression-language": "^3.4|^4.0|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -8797,7 +8813,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2019-06-26T09:24:49+00:00"
+            "time": "2019-11-28T13:33:56+00:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -9020,6 +9036,68 @@
                 "localization"
             ],
             "time": "2019-06-17T17:15:38+00:00"
+        },
+        {
+            "name": "symfony/mime",
+            "version": "v5.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/mime.git",
+                "reference": "0e6a4ced216e49d457eddcefb61132173a876d79"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/mime/zipball/0e6a4ced216e49d457eddcefb61132173a876d79",
+                "reference": "0e6a4ced216e49d457eddcefb61132173a876d79",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5",
+                "symfony/polyfill-intl-idn": "^1.10",
+                "symfony/polyfill-mbstring": "^1.0"
+            },
+            "conflict": {
+                "symfony/mailer": "<4.4"
+            },
+            "require-dev": {
+                "egulias/email-validator": "^2.1.10",
+                "symfony/dependency-injection": "^4.4|^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Mime\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "A library to manipulate MIME messages",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "mime",
+                "mime-type"
+            ],
+            "time": "2019-11-30T14:12:50+00:00"
         },
         {
             "name": "symfony/monolog-bridge",
@@ -9473,16 +9551,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.11.0",
+            "version": "v1.13.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609"
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/fe5e94c604826c35a32fa832f35bd036b6799609",
-                "reference": "fe5e94c604826c35a32fa832f35bd036b6799609",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7b4aab9743c30be783b73de055d24a39cf4b954f",
+                "reference": "7b4aab9743c30be783b73de055d24a39cf4b954f",
                 "shasum": ""
             },
             "require": {
@@ -9494,7 +9572,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.13-dev"
                 }
             },
             "autoload": {
@@ -9528,7 +9606,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-11-27T14:18:11+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
@@ -11344,7 +11422,7 @@
                     "email": "adrien.brault@gmail.com"
                 },
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
@@ -11394,7 +11472,7 @@
             ],
             "authors": [
                 {
-                    "name": "William Durand",
+                    "name": "William DURAND",
                     "email": "william.durand1@gmail.com"
                 }
             ],
